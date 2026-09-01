@@ -37,7 +37,7 @@ const SignupPage = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:8080/api/medicines/signup", {
+      const res = await axios.post("https://online-medical-management-system.onrender.com/api/medicines/signup", {
         name,
         email,
         username,

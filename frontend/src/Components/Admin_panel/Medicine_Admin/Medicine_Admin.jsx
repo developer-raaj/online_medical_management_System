@@ -38,7 +38,7 @@ const Medicine_Admin = () => {
     if (!token) return;
     setLoading(true);
     axios
-      .get("http://localhost:8080/api/medicines/", {
+      .get("https://online-medical-management-system.onrender.com/api/medicines/", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMedicines(res.data))
@@ -51,7 +51,7 @@ const Medicine_Admin = () => {
     if (!window.confirm("Are you sure you want to delete this medicine?")) return;
     setLoading(true);
     axios
-      .delete(`http://localhost:8080/api/medicines/delete/${id}`, {
+      .delete(`https://online-medical-management-system.onrender.com/api/medicines/delete/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
@@ -74,7 +74,7 @@ const Medicine_Admin = () => {
     setLoading(true);
     axios
       .put(
-        `http://localhost:8080/api/medicines/update/${selectedMedicine._id}`,
+        `https://online-medical-management-system.onrender.com/api/medicines/update/${selectedMedicine._id}`,
         updatedMedicine,
         { headers: { Authorization: `Bearer ${token}` } }
       )

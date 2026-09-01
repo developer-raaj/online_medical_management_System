@@ -25,7 +25,7 @@ const LoginPage = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:8080/api/medicines/login", {
+      const res = await fetch("https://online-medical-management-system.onrender.com/api/medicines/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
