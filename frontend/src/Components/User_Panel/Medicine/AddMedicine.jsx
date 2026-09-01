@@ -26,7 +26,7 @@ function AddMedicine() {
     setLoading(true);
 
     try {
-      await API.post("/add", form);
+      await API.post("/medicines/add", form);
       toast.success("✅ Medicine Added Successfully!", {
         position: "top-right",
         autoClose: 2000,
