@@ -35,14 +35,14 @@ function UpdateStock() {
     }
 
     try {
-      await API.post("/add-sales", {
+      await API.post("/medicines/add-sales", {
         batchNo,
         quantity: Number(soldQuantity),
         mrp: Number(mrp),
         customerName,
       });
 
-      const { data } = await API.get(`/medicine-info/${batchNo}`);
+      const { data } = await API.get(`/medicines/medicine-info/${batchNo}`);
       const total = Number(soldQuantity) * Number(mrp);
 
       const content = `
