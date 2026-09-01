@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Atom } from "react-loading-indicators"; // ✅ spinner
+import { Atom } from "react-loading-indicators"; // spinner
 import "./SignupPage.css";
 
 const SignupPage = () => {
