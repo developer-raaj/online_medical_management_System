@@ -1,0 +1,173 @@
+/* Main Container */
+.reports-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #0f012e58, #7109b77e, #01071e7a);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.reports-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Table Wrapper */
+.reports-table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table */
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table-header {
+  background-color: #a828d6;
+}
+
+.table-col {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+.table-row{
+  color: white;
+}
+.table-row:nth-child(even) {
+  background-color: #6020865d;
+  color: white;
+}
+
+.table-cell {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Status Badges */
+.status {
+  font-weight: bold;
+  padding: 2px 14px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 5%;
+  width: 120px;
+}
+
+.status.available {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.near-expiry {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.expired,
+.status.expired-history {
+  background-color: #e8989fa1;
+  color: #bf0a1d;
+}
+
+.status.purchased {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status.sold {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+/* No Records */
+.no-records {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* === Pagination Styles === */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 6px;
+}
+
+.pagination-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination-page {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination-page:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.active-page {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.reports-loader-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   background: linear-gradient(135deg, #0f012e58, #7109b77e, #040f427a);
+  z-index: 9999;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reports-title {
+    font-size: 20px;
+  }
+
+  .table-col, .table-cell {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

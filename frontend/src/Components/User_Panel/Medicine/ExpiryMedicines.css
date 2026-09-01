@@ -1,0 +1,108 @@
+.expiry-table-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  padding: 20px;
+ width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #0f012e58, #7109b77e, #01071e7a);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ebe8e8;
+}
+
+.expiry-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expiry-table th,
+.expiry-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  color: #413b38a6;
+  font-weight: 600;
+}
+
+.expiry-table th {
+  background: linear-gradient(135deg, #0f012e58, #2f0e457e, #01071e7a);
+  color: white;
+}
+
+
+.near-expiry {
+  background-color: #f3eccd; 
+  color:red;
+}
+
+.expired {
+  background-color: #f3c2c2; 
+  color: rgb(191, 22, 22);
+  font-weight: bold;
+}
+
+/* === Pagination Styles === */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 6px;
+}
+
+.pagination-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination-page {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination-page:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.active-page {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.expiry-loader-overlay{
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   background: linear-gradient(135deg, #0f012e58, #7109b77e, #040f427a);
+  z-index: 9999;
+}

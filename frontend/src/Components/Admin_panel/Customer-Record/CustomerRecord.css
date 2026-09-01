@@ -1,0 +1,125 @@
+/* Container */
+.customer-record-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #0f012e58, #7109b77e, #07113e7a);
+  border-radius: 12px;
+  box-shadow: 0 0px 120px rgba(162, 5, 235, 0.81);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.customer-record-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Loading & No Data */
+.customer-loading,
+.customer-no-data {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+/* Table Wrapper */
+.customer-table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table */
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* Table Header */
+.customer-table-header-row {
+  background-color: #d77a7a;
+}
+
+.customer-table-th {
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #5000fe8a, #8d05e8f9);
+}
+
+/* Table Body */
+.customer-table-body .customer-table-row:nth-child(even) {
+  background-color: #720eb55a;
+  color: white;
+}
+
+.customer-table-td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #fdfeff;
+}
+
+.customer-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.customer-page-btn {
+  background-color: #0078ff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.customer-page-btn:hover {
+  background-color: #005fcb;
+}
+
+.customer-page-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.customer-page-info {
+  color: #fff;
+  font-size: 15px;
+}
+
+.customer-loading-overlay{
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   background: linear-gradient(135deg, #0f012e58, #7109b77e, #040f427a);
+  z-index: 9999;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .customer-table-th,
+  .customer-table-td {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
