@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import API from "../Api/api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Commet } from "react-loading-indicators"; // ✅ Loader import
+import { Commet } from "react-loading-indicators"; //  Loader import
 import "./UpdateStock.css";
 
 function UpdateStock() {
@@ -10,7 +10,7 @@ function UpdateStock() {
   const [batchNo, setBatchNo] = useState("");
   const [soldQuantity, setSoldQuantity] = useState("");
   const [mrp, setMrp] = useState("");
-  const [loading, setLoading] = useState(false); // ✅ Loading state
+  const [loading, setLoading] = useState(false); //  Loading state
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ function UpdateStock() {
       return;
     }
 
-    setLoading(true); // ✅ Start loader
+    setLoading(true); // Start loader
 
     const printWin = window.open("", "_blank", "width=600,height=700");
     if (!printWin) {

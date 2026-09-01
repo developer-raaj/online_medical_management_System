@@ -12,12 +12,12 @@ function MedicineList() {
   useEffect(() => {
     const fetchMedicines = async () => {
       try {
-        const res = await API.get("/");
+        const res = await API.get("/medicines");
         setMedicines(res.data);
       } catch (err) {
         console.error(err);
       } finally {
-        setLoading(false); // Stop loader
+        setLoading(false); 
       }
     };
     fetchMedicines();
@@ -79,7 +79,7 @@ function MedicineList() {
             </tbody>
           </table>
 
-          {/* ✅ PAGINATION CONTROLS */}
+          {/*  PAGINATION CONTROLS */}
           <div className="pagination-container">
             <button
               className="pagination-btn"
