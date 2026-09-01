@@ -37,7 +37,7 @@ function ReportsGraph() {
   const fetchAnalytics = async () => {
     setLoading(true);
     try {
-      const res = await API.get(`/analytics?timeFrame=${timeFrame}`);
+      const res = await API.get(`/medicines/analytics?timeFrame=${timeFrame}`);
       setSalesData(res.data);
     } catch (err) {
       console.error("Failed to fetch analytics:", err);

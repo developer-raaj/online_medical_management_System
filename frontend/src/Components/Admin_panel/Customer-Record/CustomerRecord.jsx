@@ -12,7 +12,7 @@ function CustomerRecord() {
   useEffect(() => {
     const fetchSales = async () => {
       try {
-        const { data } = await API.get("/customer-sales");
+        const { data } = await API.get("/medicines/customer-sales");
         const mergedSales = [];
         Object.entries(data).forEach(([customer, sales]) => {
           sales.forEach((sale) => mergedSales.push({ ...sale, customer }));

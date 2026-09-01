@@ -10,7 +10,7 @@ function ExpiryMedicines() {
   const rowsPerPage = 6;
 
   useEffect(() => {
-    API.get("/check-expiry")
+    API.get("/medicines/check-expiry")
       .then((res) => setExpiryData(res.data))
       .catch((err) => console.error(err))
       .finally(() => setLoading(false)); //  Stop loading

@@ -15,7 +15,7 @@ function Reports() {
   const rowsPerPage = 6;
 
   useEffect(() => {
-    API.get("/reports")
+    API.get("/medicines/reports")
       .then((res) => setReports(res.data))
       .catch((err) => console.error(err))
       .finally(() => setLoading(false)); // ✅ Stop loading
